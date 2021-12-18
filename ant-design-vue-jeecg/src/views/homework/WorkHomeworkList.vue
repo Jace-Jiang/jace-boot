@@ -164,6 +164,18 @@
             dataIndex: 'rdRemark'
           },
           {
+            title:'车站正常状态',
+            align:"center",
+            dataIndex: 'rdStatusNorm',
+            scopedSlots: {customRender: 'imgSlot'}
+          },
+          {
+            title:'车站一场状态',
+            align:"center",
+            dataIndex: 'rdStatusOne',
+            scopedSlots: {customRender: 'imgSlot'}
+          },
+          {
             title: '操作',
             dataIndex: 'action',
             align:"center",
@@ -205,6 +217,8 @@
         fieldList.push({type:'string',value:'rdColor',text:'路线颜色',dictCode:''})
         fieldList.push({type:'string',value:'rdFile',text:'上传附件',dictCode:''})
         fieldList.push({type:'string',value:'rdRemark',text:'备注',dictCode:''})
+        fieldList.push({type:'string',value:'rdStatusNorm',text:'车站正常状态',dictCode:''})
+        fieldList.push({type:'string',value:'rdStatusOne',text:'车站一场状态',dictCode:''})
         this.superFieldList = fieldList
       }
     }

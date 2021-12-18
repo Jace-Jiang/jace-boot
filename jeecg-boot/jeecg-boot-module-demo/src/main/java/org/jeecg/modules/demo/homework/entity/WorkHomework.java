@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
 /**
  * @Description: 测试表
  * @Author: jeecg-boot
- * @Date:   2021-12-15
+ * @Date:   2021-12-17
  * @Version: V1.0
  */
 @Data
@@ -87,4 +87,12 @@ public class WorkHomework implements Serializable {
 	@Excel(name = "备注", width = 15)
     @ApiModelProperty(value = "备注")
     private java.lang.String rdRemark;
+	/**车站正常状态*/
+	@Excel(name = "车站正常状态", width = 15)
+    @ApiModelProperty(value = "车站正常状态")
+    private java.lang.String rdStatusNorm;
+	/**车站一场状态*/
+	@Excel(name = "车站一场状态", width = 15)
+    @ApiModelProperty(value = "车站一场状态")
+    private java.lang.String rdStatusOne;
 }

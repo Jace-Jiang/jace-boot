@@ -43,6 +43,16 @@
               <a-textarea v-model="model.rdRemark" rows="4" placeholder="请输入备注" />
             </a-form-model-item>
           </a-col>
+          <a-col :span="24">
+            <a-form-model-item label="车站正常状态" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="rdStatusNorm">
+              <j-image-upload isMultiple  v-model="model.rdStatusNorm" ></j-image-upload>
+            </a-form-model-item>
+          </a-col>
+          <a-col :span="24">
+            <a-form-model-item label="车站一场状态" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="rdStatusOne">
+              <j-image-upload isMultiple  v-model="model.rdStatusOne" ></j-image-upload>
+            </a-form-model-item>
+          </a-col>
         </a-row>
       </a-form-model>
     </j-form-container>
@@ -80,6 +90,15 @@
         },
         confirmLoading: false,
         validatorRules: {
+           rdName: [
+              { required: true, message: '请输入路线名称!'},
+           ],
+           rdCode: [
+              { required: true, message: '请输入路线代码!'},
+           ],
+           rdFile: [
+              { required: true, message: '请输入上传附件!'},
+           ],
         },
         url: {
           add: "/homework/workHomework/add",

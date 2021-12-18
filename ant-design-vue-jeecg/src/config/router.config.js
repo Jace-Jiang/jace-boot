@@ -14,6 +14,18 @@ export const asyncRouterMap = [
     redirect: '/dashboard/analysis',
     children: [
 
+      {
+        path: '/homework',
+        name: 'homework',
+        component: RouteView,
+        meta: { 
+          title: '共同学习作业', 
+          redirect: '/homework',
+          icon: 'dashboard',
+        },
+        component: () => import('@/views/homework/WorkHomeworkList')
+      },
+
       // // dashboard
       // {
       //   path: '/dashboard',
