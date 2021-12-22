@@ -20,7 +20,7 @@
           </a-col>
           <a-col :span="24">
             <a-form-model-item label="线宽" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="rdWidth">
-              <a-input v-model="model.rdWidth" placeholder="请输入线宽"  ></a-input>
+              <a-InputNumber v-model="model.rdWidth" ></a-InputNumber> PX
             </a-form-model-item>
           </a-col>
           <a-col :span="24">
